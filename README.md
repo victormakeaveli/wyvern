@@ -1,2 +1,2 @@
 ### Wyvern Project
-#### Django using postgreSQL
+#### Django with postgreSQL
