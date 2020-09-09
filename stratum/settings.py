@@ -7,7 +7,7 @@ SECRET_KEY = '2^!d=*%=a@nn4+mb1ff(*yu5$4dej1apm3*6%%89csmc@hw(nv'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -56,7 +56,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'wyvern',
-        'USER': 'superlost',
+        'USER': 'wyvern',
         'PASSWORD': 'cvx',
         'HOST': 'localhost',
         'PORT': '',
