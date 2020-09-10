@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Hey, </h1>
+<h2> thats the guys page, </h2>
+<h3> and those are the guys : </h3>
+<ul>
+    {% for people in object_list %}
+    
+    <li>This is {{ people }}, he is currently {{ people.status }}. This data was created {{people.date_created}} </li>
+    {% endfor %}
+</ul>
+{% endblock  %}
