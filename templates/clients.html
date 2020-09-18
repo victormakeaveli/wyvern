@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Clients {% endblock %}
+
+{% block content %}
+
+
+<h1> Hey, </h1>
+<h2> thats the clients page, </h2>
+<h3> and those are the clients :</h3>
+
+<ul>
+    {% for client in object_list %}
+    
+    <li>
+    This is <a href ="{% url 'detail' client.id %}">{{ client.name }}</a> , currently {{ client.age }} years old at {{ client.date_created }}
+    </li>
+    
+    {% endfor %}
+</ul>
+
+
+{% endblock  %}

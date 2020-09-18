@@ -19,7 +19,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'wyvern',
+    
+    'django_extensions',
+    
+    'wyvern.apps.WyvernConfig',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +62,7 @@ DATABASES = {
         'USER': 'wyvern',
         'PASSWORD': 'cvx',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 

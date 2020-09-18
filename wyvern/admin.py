@@ -1,5 +1,6 @@
 from django.contrib import admin
 
-from .models import People
+from .models import Client, Wyvern
 
-admin.site.register(People)
+admin.site.register(Client)
+admin.site.register(Wyvern)
