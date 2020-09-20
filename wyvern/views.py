@@ -15,12 +15,13 @@ class ClientPageView(ListView):
     template_name = 'clients.html'
     model = Client
 
-def client_detail(request, Client_id):
-    client_name = Client.objects.get(name)
-    client_age = Client.objects.get(age)
-    context = {
-        "name": client_name,
-        "age": client_age,
-    }
+def client_detail(request, client_id):
+    # import pdb; pdb.set_trace()
+    print(f"client_id: { client_id }")
+
+    client = Client.objects.get(id=client_id)
+    
+
+    context = { "client_var": client } 
 
     return render(request, "detail.html", context)
