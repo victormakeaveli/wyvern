@@ -29,6 +29,7 @@ class Wyvern(models.Model):
     
     wyvern = models.ForeignKey(Client, on_delete=models.CASCADE)
     wyvern_text = models.CharField(max_length=50)
+    
     def __str__(self):
         return self.age
 

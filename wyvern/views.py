@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView, ListView, DetailView
 from django.template import loader
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 
 from .models import Client, Wyvern
 
@@ -16,7 +16,7 @@ class ClientPageView(ListView):
     model = Client
 
 def client_detail(request, client_id):
-
     client = Client.objects.get(id=client_id)
-    context = { "client_var": client } 
+    context = { "client_var": client }
+
     return render(request, "detail.html", context)
