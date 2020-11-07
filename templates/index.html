@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> Hello, </h1>
-<h2> and welcome to my site. </h2>
+    <div class='left-sidebar'>
+        <div class='hello' contenteditable>
+                <h1> Hello, </h1>
+        </div>
+        <div class='welcome' contenteditable>
+                <h2> welcome to my site. </h2>
+        </div>
+    </div>
+
+	{% comment %} <div class="container">
+    </div> {% endcomment %}
 {% endblock  %}

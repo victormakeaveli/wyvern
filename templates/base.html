@@ -10,13 +10,18 @@
         <title>{% block title %}{% endblock %}</title>
 </head>
 
-<header>
-        <a href="{% url 'home' %}">Home</a> | <a href ="{% url 'clients' %}">Clients</a> |  <a href ="{% url 'about' %}">About</a>
-</header>
+<div class="structure" contenteditable>
+        <header>
+                <a href="{% url 'home' %}">Home</a> | <a href ="{% url 'clients' %}">Clients</a> |  <a href ="{% url 'about' %}">About</a>
+        </header>
+</div>
 
-<body>
+<body class="body" contenteditable>
 
 {% block content %}{% endblock %}
 
 </body>
+
+<footer class="footer" contenteditable></footer>
+
 </html>
