@@ -1,9 +1,10 @@
+import os
 from .base import *
 
-
-SECRET_KEY = '2^!d=*%=a@nn4+mb1ff(*yu5$4dej1apm3*6%%89csmc@hw(nx'
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
+STATIC_ROOT = os.path.join(BASE_DIR, './static')
