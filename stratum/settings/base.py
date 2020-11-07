@@ -1,14 +1,7 @@
 from pathlib import Path
 import os
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-SECRET_KEY = '2^!d=*%=a@nn4+mb1ff(*yu5$4dej1apm3*6%%89csmc@hw(nv'
-
-DEBUG = True
-
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Application definition
 
@@ -104,3 +97,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, './static/root')
+
