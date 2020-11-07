@@ -20,17 +20,3 @@ class Client(models.Model):
         return self.name
 
     __repr__ = __str__
-    
-
-class Wyvern(models.Model):
-    """
-    i dont really know
-    """
-    
-    wyvern = models.ForeignKey(Client, on_delete=models.CASCADE)
-    wyvern_text = models.CharField(max_length=50)
-    
-    def __str__(self):
-        return self.age
-
-    __repr__ = __str__

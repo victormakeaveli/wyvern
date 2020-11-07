@@ -2,8 +2,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from django.template import loader
 from django.shortcuts import render
 
-from .models import Client, Wyvern
-
+from .models import Client
 
 class HomePageView(TemplateView):
     template_name = 'index.html'
