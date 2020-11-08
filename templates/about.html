@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
 
+{% block header %}
+<header>
+        <div class='nav'>
+            <ul>
+            <li class="home"><a href="{% url 'home' %}">Home</a></li>
+            <li class="clients"><a href ="{% url 'clients' %}">Clients</a></li>
+            <li class="about"><a class="active" href ="{% url 'about' %}">About</a></li>
+            </ul>
+        </div>
+</header>
+{% endblock %}
+
 {% block content %}
 
-<p> I just want to exercise my psql db with this django project.</p>
-<p> note: this isn't an exercise anymore </p>
+<h4> I just want to exercise my psql db with this django project.</h4>
 
-
+<h4> note: this isn't an exercise anymore </h4>
+<br>
+<h4> *big awesome thing here* </h4> 
 {% endblock  %}

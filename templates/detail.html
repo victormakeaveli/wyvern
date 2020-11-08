@@ -1,10 +1,19 @@
 {% extends 'base.html' %}
 
 {% block title %} Clients {% endblock%}
-{% block content %}
+{% block header %}
+<header>
+        <div class='nav'>
+            <ul>
+                <li class="home"><a href="{% url 'home' %}">Home</a></li>
+                <li class="clients"><a href ="{% url 'clients' %}">Clients</a></li>
+                <li class="about"><a href ="{% url 'about' %}">About</a></li>
+            </ul>
+        </div>
+</header>
+{% endblock %}
 
-<h1> Howdy, </h1>
-<h2> thats the detailed clients page.</h2>
+{% block content %}
 
 {{ client_var.name }}
 {{ client_var.age }}

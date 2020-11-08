@@ -1,10 +1,28 @@
 {% extends 'base.html' %}
 
-{% block title %} Clients {% endblock %}
+{% block title %}Clients{% endblock %}
 
+{% block header %}
+<header>
+        <div class='nav'>
+            <ul>
+                <li class="home"><a href="{% url 'home' %}">Home</a></li>
+                <li class="clients"><a class="active" href ="{% url 'clients' %}">Clients</a></li>
+                <li class="about"><a href ="{% url 'about' %}">About</a></li>
+            </ul>
+        </div>
+</header>
+
+{% endblock %}
 {% block content %}
 
+
+<div class="content">
 <ul>
+
+    <h2>Some random "objects"</h2>
+    <br>
+    <br>
     {% for client in object_list %}
     
     <li>
@@ -13,6 +31,6 @@
     
     {% endfor %}
 </ul>
-
+</div>
 
 {% endblock  %}

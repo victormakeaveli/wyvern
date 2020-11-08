@@ -4,22 +4,20 @@
 <meta name = "viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-        
-        <title>{% block title %}{% endblock %}</title>
-</head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
-        <header>
-                <a href="{% url 'home' %}">Home</a> | <a href ="{% url 'clients' %}">Clients</a> |  <a href ="{% url 'about' %}">About</a>
-        </header>
+<title>{% block title %}{% endblock %}</title>
+{% block header %}{% endblock %}
+
+</head>
 <body>
 
 <div class='left-sidebar'>
-        <div class='hello'>
+        <div>
                 <h1> Hello, </h1></div>
 
-        <div class='welcome'>
+        <div>
                 <h2> welcome to my site. </h2></div>
 </div>
 
@@ -29,12 +27,12 @@
 </main>
 
 <div class='right-sidebar'>
-        <div class='hello'>
+        <div>
         <h3> i hope your day is going well (: </h3></div>
 </div>
 
 
-</body> 
-
 <footer><h2> hardcoded by Victor Hugo </h2></footer>
+
+</body> 
 </html>
