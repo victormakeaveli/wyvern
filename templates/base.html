@@ -10,18 +10,31 @@
         <title>{% block title %}{% endblock %}</title>
 </head>
 
-<div class="structure" contenteditable>
         <header>
                 <a href="{% url 'home' %}">Home</a> | <a href ="{% url 'clients' %}">Clients</a> |  <a href ="{% url 'about' %}">About</a>
         </header>
+
+<div class='left-sidebar'>
+        <div class='hello'>
+                <h1> Hello, </h1></div>
+
+        <div class='welcome'>
+                <h2> welcome to my site. </h2></div>
 </div>
 
-<body class="body" contenteditable>
+<div class='right-sidebar'>
+        <div class='hello'>
+        <h3> i hope your day is going well (: </h3></div>
+</div>
 
-{% block content %}{% endblock %}
+<body>
 
-</body>
+<main>
+{% block content %} 
+{% endblock %}
+</main>
 
-<footer class="footer" contenteditable></footer>
+</body> 
 
+<footer > hardcoded by Victor Hugo</footer>
 </html>

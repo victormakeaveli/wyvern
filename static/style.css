@@ -8,11 +8,20 @@ html{
     align-content: center;
 }
 
+header {
+    padding: 2rem;
+    grid-column: 1/4;
+}
+main {
+    display: grid;
+    grid-column: 2/3;
+    background-color: blanchedalmond;
+}
 body{
-    grid-template-rows: auto 1fr auto;
-    margin-top:1,5%;
+    margin-top:1.5%;
     display: grid;
     height: 100vh;
+    grid-template-rows: auto 1fr auto;
     grid-template: auto 1fr auto / auto 1fr auto;
 }
 h1 {
@@ -25,37 +34,24 @@ h3 {
     color: whitesmoke;
 }
 
-/* .container {
-    display: flex;
-    flex-direction: column;
-} */
-
-header {
-    padding: 2rem;
-    grid-column: 1/4;
-}
 
 .left-sidebar {
     grid-column: 1/2;
 }
 
-/* main{
-    display: grid;
-    grid-column: 2/3;
-    grid-template-rows: minmax(10px, 10%) auto;
-    float: left;
-} */
-
 .right-sidebar{
+    align-items: center;
     grid-column: 3/4;
-}
-
-footer {
-    padding: 2rem;
-    grid-column: 1/4;
 }
 
 .left-sidebar,
 .right-sidebar{
     padding: 1rem;
 }
+
+footer {
+    background: wheat;
+    padding: 1rem;
+    text-align: center;
+    grid-column: 1 / 4;
+  }
