@@ -1,5 +1,5 @@
 html{
-    background-color: rgb(21,32,43);
+    background-color:rgba(21, 32, 43, 0.45);
     padding:0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,17 +11,17 @@ html{
 header {
     padding: 2rem;
     grid-column: 1/4;
+    background-color:rgba(21,32,43,0.56);
+
 }
 main {
+    display: grid;
     grid-column: 2/3;
-    background-color: blanchedalmond;
+    background-color: whitesmoke;
 }
 body{
-    margin-top:1.5%;
     display: grid;
-    height: 100vh;
-    grid-column: 2/3;
-    grid-template-rows: auto 1fr auto;
+    height: 140vh;
     grid-template: auto 1fr auto / auto 1fr auto;
 }
 h1 {
@@ -34,24 +34,27 @@ h3 {
     color: whitesmoke;
 }
 
-
 .left-sidebar {
     grid-column: 1/2;
+    margin-top: 4rem;
 }
 
 .right-sidebar{
-    align-items: center;
+    margin-top: 17rem;
     grid-column: 3/4;
 }
 
+.footer,
+.header,
 .left-sidebar,
 .right-sidebar{
     padding: 1rem;
 }
 
 footer {
-    background: wheat;
-    padding: 2rem;
+    background-color:rgba(21,32,43,0.56);
+    padding: 1rem;
     text-align: center;
     grid-column: 1 / 4;
   }
+
