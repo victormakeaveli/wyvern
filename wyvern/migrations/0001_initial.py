@@ -25,11 +25,10 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Wyvern',
+            name='Counter',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('wyvern_text', models.CharField(max_length=50)),
-                ('wyvern', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='wyvern.client')),
+                ('count', models.IntegerField(default=0)),
             ],
         ),
     ]

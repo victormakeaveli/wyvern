@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+
 class Client(models.Model):
     """
     simple client class
@@ -20,3 +21,13 @@ class Client(models.Model):
         return self.name
 
     __repr__ = __str__
+
+
+class Counter(models.Model):
+    """
+    Count the visitors
+    """
+    
+    count = models.IntegerField(default=0)
+
+    
