@@ -19,6 +19,16 @@ class AboutPageView(TemplateView):
 
 def client_detail(request, client_id):
     client = Client.objects.get(id=client_id)
-    context = { "client_var": client }
+    counter = Counter.objects.last()
+    if not counter:
+        counter = Counter.objects.create()
+    
+    counter.count =+ 1
+    counter.save()
+
+    context = { 
+        "client_var": client,
+        "counter_var": counter 
+        }
 
     return render(request, "detail.html", context)

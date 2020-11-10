@@ -118,7 +118,7 @@ footer {
     padding: 0.4rem;
     text-align: center;
     grid-column: 1 / 4;
-    background-color:rgba(21,32,43,0.56);
+    /* background-color:rgba(21,32,43,0.56); */
     margin-bottom: 1.3rem;
 }
 
