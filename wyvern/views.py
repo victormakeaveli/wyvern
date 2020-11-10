@@ -20,8 +20,6 @@ class AboutPageView(TemplateView):
 def client_detail(request, client_id):
     client = Client.objects.get(id=client_id)
     counter = Counter.objects.last()
-    if not counter:
-        counter = Counter.objects.create()
     
     counter.count =+ 1
     counter.save()
