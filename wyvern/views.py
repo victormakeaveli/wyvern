@@ -1,12 +1,25 @@
 from django.views.generic import TemplateView, ListView
 from django.shortcuts import render
-from django.http import HttpResponse
 
 from .models import Client, Counter
 
 class HomePageView(TemplateView):
     template_name = 'index.html'
+    counter = Counter.objects.last()
 
+    def counting(request, self):    
+        if not self.counter:
+            self.counter = Counter.objects.create()
+
+        self.counter.count += 1
+        self.counter.save()
+
+        context = {
+            "counter_var": self.counter,
+        }
+
+        return render(request, self.template_name, context)
+    
 
 class ClientPageView(ListView):
     template_name = 'clients.html'
@@ -19,14 +32,9 @@ class AboutPageView(TemplateView):
 
 def client_detail(request, client_id):
     client = Client.objects.get(id=client_id)
-    counter = Counter.objects.last()
-    
-    counter.count =+ 1
-    counter.save()
 
     context = { 
         "client_var": client,
-        "counter_var": counter 
         }
 
     return render(request, "detail.html", context)

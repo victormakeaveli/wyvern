@@ -30,4 +30,10 @@ class Counter(models.Model):
     
     count = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.name
+
+    __repr__ = __str__
+
+
     
