@@ -5,21 +5,7 @@ from .models import Client, Counter
 
 class HomePageView(TemplateView):
     template_name = 'index.html'
-    counter = Counter.objects.last()
 
-    def counting(request, self):    
-        if not self.counter:
-            self.counter = Counter.objects.create()
-
-        self.counter.count += 1
-        self.counter.save()
-
-        context = {
-            "counter_var": self.counter,
-        }
-
-        return render(request, self.template_name, context)
-    
 
 class ClientPageView(ListView):
     template_name = 'clients.html'
@@ -38,3 +24,15 @@ def client_detail(request, client_id):
         }
 
     return render(request, "detail.html", context)
+
+def base_html_counter(request):
+    counter = Counter.objects.last()
+
+    if not counter:
+        counter = Counter.objects.create()
+
+    counter.count += 1
+    counter.save()
+
+    return render(request, "base.html", counter)
+    
