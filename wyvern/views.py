@@ -25,7 +25,7 @@ def client_detail(request, client_id):
 
     return render(request, "detail.html", context)
 
-def base_html_counter(request):
+def base_html_counter(view):
     counter = Counter.objects.last()
 
     if not counter:
