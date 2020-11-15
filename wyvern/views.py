@@ -1,6 +1,5 @@
 from django.views.generic import TemplateView, ListView
 from django.shortcuts import render
-from django.http import HttpResponse
 
 from .models import Client, CounterViews
 
@@ -19,6 +18,7 @@ class AboutPageView(TemplateView):
 
 def client_detail(request, client_id):
     client = Client.objects.get(id=client_id)
+<<<<<<< HEAD
 
     counter = CounterViews.objects.first()
     if not counter:
@@ -26,10 +26,23 @@ def client_detail(request, client_id):
     
     counter.count += 1
     counter.save()
+=======
+>>>>>>> nest
 
     context = { 
         "client_var": client,
-        "counter_var": counter 
         }
 
     return render(request, "detail.html", context)
+
+def base_html_counter(view):
+    counter = Counter.objects.last()
+
+    if not counter:
+        counter = Counter.objects.create()
+
+    counter.count += 1
+    counter.save()
+
+    return render(request, "base.html", counter)
+    
