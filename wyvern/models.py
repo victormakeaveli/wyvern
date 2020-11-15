@@ -23,11 +23,11 @@ class Client(models.Model):
     __repr__ = __str__
 
 
-class Counter(models.Model):
+class CounterViews(models.Model):
     """
     Count the visitors
     """
     
-    count = models.IntegerField(default=0)
+    count = models.IntegerField(default=0)  
 
     
