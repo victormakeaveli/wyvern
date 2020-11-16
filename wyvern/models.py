@@ -25,15 +25,12 @@ class Client(models.Model):
 
 class CounterViews(models.Model):
     """
+
     Count the visitors
+
     """
     
     count = models.IntegerField(default=0)  
-
-    def __str__(self):
-        return self.name
-
-    __repr__ = __str__
 
 
     

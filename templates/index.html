@@ -12,6 +12,13 @@
         </div>
 </header>
 {% endblock %}
+{% block left%}
+{{ request.counter.count}}
+{% if counter.count %}
+        <div>   
+                <h3> you are my {{ counter.count }}º visitor </h3></div>
+{% endif %}
+{% endblock%}
 
 {% block content %}
 
