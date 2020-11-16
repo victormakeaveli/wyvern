@@ -18,16 +18,6 @@ class AboutPageView(TemplateView):
 
 def client_detail(request, client_id):
     client = Client.objects.get(id=client_id)
-<<<<<<< HEAD
-
-    counter = CounterViews.objects.first()
-    if not counter:
-        counter = CounterViews.objects.create()
-    
-    counter.count += 1
-    counter.save()
-=======
->>>>>>> nest
 
     context = { 
         "client_var": client,
