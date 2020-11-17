@@ -3,7 +3,7 @@ from django.utils import timezone
 
 class Client(models.Model):
     """
-    simple client class
+    Simple clients class
     
     name
     email
@@ -28,6 +28,7 @@ class CounterViews(models.Model):
 
     Count the visitors
 
+    count
     """
     
     count = models.IntegerField(default=0)  

@@ -1,11 +1,24 @@
 from django.views.generic import TemplateView, ListView, View
 from django.shortcuts import render
+from django.views import generic
 
 from .models import Client, CounterViews
 
-class HomePageView(TemplateView):
+
+class HomePageView(generic.TemplateView):
     template_name = 'index.html'
     
+    def get_queryset(self):
+        counter = CounterViews.objects.last()
+        
+        if not counter:
+            counter = CounterViews.objects.create()
+
+        counter.count += 1
+        counter.save()
+
+        return counter
+
 
 class ClientPageView(ListView):
     template_name = 'clients.html'
@@ -25,13 +38,3 @@ def client_detail(request, client_id):
 
     return render(request, "detail.html", context)
 
-def base_html_counter(request):
-    counter = CounterViews.objects.last()
-    if not counter:
-        counter = CounterViews.objects.create()
-
-    counter.count += 1
-    counter.save()
-
-    return render(request, "base.html", {"counter":counter})
-    

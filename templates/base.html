@@ -12,16 +12,16 @@
 
 </head>
 <body>
-{% block left %}
 <div class='left-sidebar'>
         <div>
                 <h1> Hello, </h1></div>
 
         <div>
                 <h2> welcome to my site. </h2></div>
+        {% block left%}
+        {% endblock %}
        
 </div>
-{% endblock %}
 <main>
 {% block content %} 
 {% endblock %}

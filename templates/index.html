@@ -12,22 +12,24 @@
         </div>
 </header>
 {% endblock %}
+
 {% block left%}
-{{ request.counter.count}}
-{% if counter.count %}
-        <div>   
-                <h3> you are my {{ counter.count }}º visitor </h3></div>
-{% endif %}
+        {% if counter_var %}
+                <div><h3> you are my {{ counter_var.count }}º visitor </h3></div>
+        {% endif %}
+
+        <h3> no visitors </h3>
 {% endblock%}
 
 {% block content %}
-
 <h4> 
 Eu fui no KUMON hoje fazer a rematricula.
 <br>
 <br>
+"You should know basic math before you start using a calculator."
 <br>
-
+<br>
+<br>
 Vivamus sit amet mollis tellus. Sed tortor ex, varius eu rhoncus ut, venenatis at ligula. Ut nunc urna, sollicitudin ut dictum id, tempor blandit lorem. Curabitur aliquam leo in dignissim elementum. Vestibulum tristique, neque quis pharetra tempus, leo lectus fringilla tortor, a porta felis dui quis enim. Proin aliquet accumsan lobortis. Morbi ut neque egestas, vehicula massa in, accumsan tellus. Nulla ac metus eros.
 <br>
 <br>
