@@ -25,7 +25,7 @@ main {
 body{
     display: grid;
     height: 100vh;
-    grid-template: auto 1fr auto / auto 1fr auto;
+   
 }
 
 h1 {
@@ -50,15 +50,15 @@ h4 {
     margin-top: 4rem;
 }
 
-.right-sidebar{
+.right-sidebar h3{
     align-self: end;
     margin-bottom: 30%;
-    grid-column: 3/4;
 }
 
 
 .left-sidebar,
 .right-sidebar{
+    grid-template-columns: minmax(50px, 8%);
     padding: 1rem;
 }
 
