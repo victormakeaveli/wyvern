@@ -25,6 +25,7 @@ main {
 body{
     display: grid;
     height: 100vh;
+    grid-template-columns: minmax(20%, 70px);
    
 }
 
@@ -58,7 +59,7 @@ h4 {
 
 .left-sidebar,
 .right-sidebar{
-    grid-template-columns: minmax(50px, 8%) 1fr;
+    grid-template-columns: minmax(50px, 8%);
     padding: 1rem;
 }
 

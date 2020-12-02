@@ -25,6 +25,7 @@ main {
 body{
     display: grid;
     height: 100vh;
+    grid-template-columns: minmax(20%, 70px);
    
 }
 
