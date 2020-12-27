@@ -8,6 +8,7 @@ Django = "*"
 pip = "*"
 django-extensions = "*"
 whitenoise = "*"
+djangorestframework = "*"
 
 [dev-packages]
 ipython = "*"

@@ -18,15 +18,12 @@ main {
     display: grid;
     grid-column: 2/3;
     background-color: whitesmoke;
-    grid-template: auto 1fr auto / auto 1fr auto;
     padding:2rem;
-
 }
+
 body{
     display: grid;
     height: 100vh;
-    grid-template-columns: minmax(20%, 70px);
-   
 }
 
 h1 {
@@ -43,7 +40,6 @@ h4 {
     font-size: 1.2em;
     border-bottom-width: 1rem;
     color: #888;    
-
 }
 
 .left-sidebar {
@@ -52,14 +48,14 @@ h4 {
 }
 
 .right-sidebar h3{
-    align-self: end;
-    margin-bottom: 30%;
+    grid-column: 3/4;
+    margin-bottom: 4rem;
+    margin-top: 250%;
+    grid-template-columns: minmax(150px, 25%) 1fr;
 }
-
 
 .left-sidebar,
 .right-sidebar{
-    grid-template-columns: minmax(50px, 8%);
     padding: 1rem;
 }
 
@@ -68,7 +64,7 @@ h4 {
     background-color: #444;
     padding: 0.5rem;
     margin: 0;
-    }
+}
 
 .nav li {
     font-family: 'Oswald', sans-serif;
@@ -109,10 +105,12 @@ h4 {
         margin-right: -4px;
     }
 }
+
 .content{
     padding: 1rem;
     text-align: left;
 }
+
 footer {
     padding: 0.4rem;
     grid-column: 1/4;
