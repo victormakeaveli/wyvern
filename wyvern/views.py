@@ -1,10 +1,11 @@
-from django.views.generic import TemplateView, ListView
 from django.shortcuts import render
 from django.views import generic
-from rest_framework import viewsets, permissions
+from django.views.generic import ListView, TemplateView
+from rest_framework import permissions, viewsets
 
+from .models import Client, Kind
 from .serializers import ClientSerializer, KindSerializer
-from .models import Client, CounterViews, Kind
+
 
 class ClientView(viewsets.ModelViewSet): 
     queryset = Client.objects.all()
@@ -12,6 +13,7 @@ class ClientView(viewsets.ModelViewSet):
 
     #restricted permission for this view specifically 
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+
 
 class KindView(viewsets.ModelViewSet):
     queryset = Kind.objects.all()
@@ -33,16 +35,20 @@ class HomePageView(generic.TemplateView):
 
     #     return counter
 
+
 class ClientPageView(ListView):
     template_name = 'clients.html'
     model = Client
 
+
 class AboutPageView(TemplateView):
     template_name = 'about.html'
+
 
 def client_detail(request, client_id):
     client = Client.objects.get(id=client_id)
     kind = Kind.objects.get(id=client_id)
+    
     context = { 
         "client_var": client,
         "kind_var" : kind,

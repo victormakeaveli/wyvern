@@ -12,5 +12,3 @@ class KindSerializer(serializers.HyperlinkedModelSerializer):
         model = Kind
         fields = ('id', 'name')
 
-    def __str__():
-        return Kind.name()

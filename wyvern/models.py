@@ -4,12 +4,14 @@ class Kind(models.Model):
     """
     The kind of Client.
     """
+
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
 
     __repr__ = __str__
+
 
 class Client(models.Model):
     """
@@ -33,6 +35,7 @@ class Client(models.Model):
         return self.name
 
     __repr__ = __str__
+
 
 class CounterViews(models.Model):
     """
