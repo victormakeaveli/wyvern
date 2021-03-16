@@ -43,15 +43,17 @@ h4 {
 }
 
 .left-sidebar {
+    display: grid;
     grid-column: 1/2;
     margin-top: 4rem;
 }
 
 .right-sidebar h3{
-    grid-column: 3/4;
+    display: grid;
+    grid-column: 3/3;
     margin-bottom: 4rem;
-    margin-top: 250%;
-    grid-template-columns: minmax(150px, 25%) 1fr;
+    /* margin-top: 250%; */
+    /* grid-template-columns: minmax(150px, 25%) 1fr; */
 }
 
 .left-sidebar,
