@@ -5,4 +5,4 @@
 
 ### todo
 
-#### query, sub-select,groupby, constraint & index
+### docs
