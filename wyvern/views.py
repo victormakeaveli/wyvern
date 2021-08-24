@@ -3,7 +3,7 @@ from django.views import generic
 from django.views.generic import ListView, TemplateView
 from rest_framework import permissions, viewsets
 
-from .models import Client, Kind
+from .models import Client, CounterViews, Kind
 from .serializers import ClientSerializer, KindSerializer
 
 
@@ -22,21 +22,12 @@ class KindView(viewsets.ModelViewSet):
 
 class HomePageView(generic.TemplateView):
     template_name = 'index.html'
-    
+    counter = CounterViews.count()
 
-    # def get_queryset(self):
-    #     counter = CounterViews.objects.last()
-        
-    #     if not counter:
-    #         counter = CounterViews.objects.create()
-
-    #     counter.count += 1
-    #     counter.save()
-
-    #     return counter
+    counter.count += 1
+    counter.save()
 
 
-class ClientPageView(ListView):
     template_name = 'clients.html'
     model = Client
 
